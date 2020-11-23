@@ -1,3 +1,7 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
 import edu.princeton.cs.algs4.QuickFindUF;
 import edu.princeton.cs.algs4.QuickUnionUF;
 import edu.princeton.cs.algs4.StdIn;
@@ -40,9 +44,9 @@ public class Percolation {
 	
 	public boolean isOpen(int linha, int coluna) {
 		
-		if(linha < tamanho && coluna < tamanho)
+		if(linha < tamanho && coluna < tamanho) {
 			
-		return matriz[linha][coluna];
+		return matriz[linha][coluna]; }
 		
 		else return false;
 		
@@ -142,6 +146,12 @@ public class Percolation {
     	
     	System.out.println(p.percolates());
     	
-    }
+	}
+	
+	@Test
+
+	public void testPercolation() {
+		assertEquals(true, percolates());
+	}
 
 }
