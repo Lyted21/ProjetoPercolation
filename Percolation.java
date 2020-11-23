@@ -143,5 +143,27 @@ public class Percolation {
     	System.out.println(p.percolates());
     	
     }
+	
+	@Test
+	
+public void testPercolation() {
+	int t = 5;
+    	int tt = 20;
+    	Percolation p = new Percolation(t);
+    	
+    	  	
+    	 for (int i = 0; i < tt; i++) {
+    	    	
+    	        int row =  StdRandom.uniform(1, t);
+    	        
+    	        int col = StdRandom.uniform(1, t);
+    	        
+    	        p.open(row, col);
+    	        
+    	    } 
+	assertEquals(true, p.percolates());
+		}
+
+	}
 
 }
